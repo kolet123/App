@@ -10,7 +10,7 @@ const LandingPage = ({ navigation }) => {
         <Text style={styles.subheading}>....</Text>
         <View style={styles.buttonContainer}>
           <Button title="Login" onPress={() => navigation.navigate('Login')} />
-          <Button title="Register" onPress={() => navigation.navigate('Registration')} />
+          <Button title="Register" onPress={() => navigation.navigate('LandingPage')} />
         </View>
       </View>
     </ImageBackground>
