@@ -13,7 +13,7 @@ const RegistrationPage = ({ navigation }) => {
     console.log('Registering with username:', username, 'email:', email, 'and password:', password);
     
     // For example, you can navigate to the Home page after successful registration
-    navigation.navigate('Home');
+    navigation.navigate('LandingPage');
   };
 
   return (

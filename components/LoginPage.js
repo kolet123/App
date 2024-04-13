@@ -4,15 +4,11 @@ import { View, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-nativ
 const LoginPage = ({ navigation }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [showPassword, setShowPassword] = useState(false); // State to toggle password visibility
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleLogin = () => {
-    // Perform login authentication with username/email and password
-    // Replace the console log with your actual authentication logic
     console.log('Logging in with username/email:', username, 'and password:', password);
-    
-    // For example, you can navigate to the Home page after successful login
-    navigation.navigate('Home');
+    navigation.navigate('Home'); // Navigate to 'Home' upon successful login
   };
 
   return (
@@ -30,7 +26,7 @@ const LoginPage = ({ navigation }) => {
         placeholder="Password"
         onChangeText={text => setPassword(text)}
         value={password}
-        secureTextEntry={!showPassword} // Use secureTextEntry based on showPassword state
+        secureTextEntry={!showPassword}
         autoCompleteType="password"
       />
       <TouchableOpacity onPress={() => setShowPassword(!showPassword)} style={styles.togglePasswordButton}>
@@ -54,7 +50,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#fcfaf5', // Change background color as needed
+    backgroundColor: '#fcfaf5',
   },
   heading: {
     fontSize: 24,
